@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js 基礎練習控制台 - 413730390</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+
+        /* 側邊欄樣式 */
+        .sidebar {
+            width: 320px;
+            background-color: #000000;
+            color: rgb(255, 134, 229);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .sidebar-header {
+            padding: 25px;
+            background-color: #1a252f;
+            border-bottom: 1px solid #34495e;
+        }
+        .sidebar-header h1 {
+            margin: 0;
+            font-size: 1.25rem;
+            color: #ffffff;
+        }
+        .sidebar-header p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        ul { list-style: none; padding: 0; }
+        li { border-bottom: 1px solid #34495e; }
+        
+        a { 
+            text-decoration: none; 
+            color: #ff5ac8; 
+            padding: 18px 25px;
+            display: block;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+        a:hover {
+            background-color: #3e5871;
+            padding-left: 35px;
+            color: #ffffff;
+        }
+        a:active, a.active {
+            background-color: #ffffff;
+            color: white;
+        }
+
+        /* 右側主區域與 Iframe */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: white;
+        }
+        .placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #95a5a6;
+            text-align: center;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>🚀 基礎練習</h1>
+            <p>學生：413730390</p>
+        </div>
+        <ul>
+            <li><a href="ex1/index.html" target="contentFrame">範例 1：第一個 Vue 頁面</a></li>
+            <li><a href="ex2/index.html" target="contentFrame">範例 2：資料顯示與插值</a></li>
+            <li><a href="ex3/index.html" target="contentFrame">範例 3：方法與事件處理</a></li>
+            <li><a href="ex4/index.html" target="contentFrame">範例 4：雙向綁定 (v-model)</a></li>
+            <li><a href="ex5/index.html" target="contentFrame">範例 5：條件渲染 (v-if)</a></li>
+            <li><a href="ex6/index.html" target="contentFrame">範例 6：列表渲染 (v-for)</a></li>
+            <li><a href="ex7/index.html" target="contentFrame">範例 7：計算屬性 (Computed)</a></li>
+            <li><a href="ex8/index.html" target="contentFrame">範例 8：樣式與 Class 綁定</a></li>
+            <li><a href="ex9/index.html" target="contentFrame">範例 9：綜合：待辦事項清單</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="placeholder">
+            <h2>請選擇左側練習項目</h2>
+            <p>內容將顯示於此處</p>
+        </div>
+        <iframe name="contentFrame" src="ex1/index.html"></iframe>
+    </div>
+</body>
+</html>
